@@ -23,4 +23,19 @@ enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r")
 # <code>from pandas import DataFrame
 # df = DataFrame(enron_data)
 # len(df.ix['poi'].values[(df.ix['poi'].values == True)])
+# shorter version: df.ix['poi'].value_counts()
 # </code>
+
+# count quantified salary
+email_count = 0
+for k in enron_data:
+    if enron_data[k]['email_address'] != 'NaN':
+        email_count += 1
+print email_count
+
+# count salary
+salary_count = 0
+for person in enron_data:
+    if enron_data[person]['salary'] != 'NaN':
+        salary_count += 1
+print salary_count
