@@ -19,4 +19,8 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-
+# find no of POI from json data
+# <code>from pandas import DataFrame
+# df = DataFrame(enron_data)
+# len(df.ix['poi'].values[(df.ix['poi'].values == True)])
+# </code>
