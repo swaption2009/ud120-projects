@@ -19,6 +19,7 @@ The dataset used in this example is a preprocessed excerpt of the
 print __doc__
 
 from time import time
+from PIL import Image
 import logging
 import pylab as pl
 import numpy as np
@@ -81,6 +82,7 @@ X_train_pca = pca.transform(X_train)
 X_test_pca = pca.transform(X_test)
 print "done in %0.3fs" % (time() - t0)
 
+print "PCA explained variance ratio: ", pca.explained_variance_ratio_[:10]
 
 ###############################################################################
 # Train a SVM classification model
